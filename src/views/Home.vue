@@ -90,7 +90,7 @@ export default {
     <h2>All Movies</h2>
     <div v-for="movie in movies" :key="movie.id">
       <h3>Title: {{ movie.title }}</h3>
-      <button v-on:click="showMovie()">More Info</button>
+      <button v-on:click="showMovie(movie)">More Info</button>
     </div>
     <div>
       <dialog id="movie-details">
