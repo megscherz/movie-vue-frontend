@@ -27,10 +27,6 @@ export default {
     <h1>{{ message }}</h1>
     <div v-for="movie in movies" v-bind:key="movie.id">
       <h2>{{ movie.title }}</h2>
-      <p>Year: {{ movie.year }}</p>
-      <p>Director: {{ movie.director }}</p>
-      <p>Plot: {{ movie.plot }}</p>
-      <p>Is the movie in English? {{ movie.english }}</p>
       <router-link v-bind:to="`/movies/${movie.id}`">More details</router-link>
     </div>
   </div>
