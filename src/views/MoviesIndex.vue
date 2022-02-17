@@ -32,7 +32,6 @@ export default {
 
 <template>
   <div class="movie-index">
-    <h1>{{ message }}</h1>
     Search by title:
     <input v-model="titleFilter" />
     <div v-for="movie in filteredMovies" v-bind:key="movie.id">
@@ -41,7 +40,14 @@ export default {
       <datalist id="titles">
         <option v-for="movie in movies" v-bind:key="movie.id">{{ movie.title }}</option>
       </datalist>
-      <h2>{{ movie.title }}</h2>
+      <transition-group
+        appear
+        enter-active-class="animate__animated animate__fadeIn"
+        leave-active-class="animate__animated animate__fadeOut"
+      >
+        <h1>{{ message }}</h1>
+        <h2>{{ movie.title }}</h2>
+      </transition-group>
       <router-link v-bind:to="`/movies/${movie.id}`">More details</router-link>
     </div>
   </div>
