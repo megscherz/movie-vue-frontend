@@ -5,7 +5,7 @@ export default {
   data: function () {
     return {
       movies: [],
-      newMovieParams: {},
+      newMovieParams: { plot: "" },
       errors: [],
     };
   },
@@ -33,23 +33,36 @@ export default {
       <ul>
         <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
       </ul>
-      Title:
-      <input type="text" v-model="newMovieParams.title" />
+      <div>
+        Title:
+        <input type="text" v-model="newMovieParams.title" />
+      </div>
       <br />
-      Year:
-      <input type="text" v-model="newMovieParams.year" />
+      <div>
+        Year:
+        <input type="text" v-model="newMovieParams.year" />
+      </div>
       <br />
-      Director:
-      <input type="text" v-model="newMovieParams.director" />
+      <div>
+        Director:
+        <input type="text" v-model="newMovieParams.director" />
+      </div>
       <br />
-      Plot:
-      <input type="text" v-model="newMovieParams.plot" />
+      <div>
+        Plot:
+        <input type="text" v-model="newMovieParams.plot" />
+        <br />
+        <small>{{ 500 - newMovieParams.plot.length }} characters remaining</small>
+      </div>
       <br />
-      English:
-      <input type="checkbox" id="choice1" name="true" value="t" />
-      <label for="true">True</label>
-      <input type="checkbox" id="choice2" name="false" value="f" />
-      <label for="false">False</label>
+      <div>
+        English:
+        <input type="checkbox" id="choice1" name="true" value="t" />
+        <label for="true">True</label>
+        <input type="checkbox" id="choice2" name="false" value="f" />
+        <label for="false">False</label>
+        <br />
+      </div>
       <br />
       <input type="submit" value="Create Movie" />
     </form>
