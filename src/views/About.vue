@@ -28,6 +28,8 @@
         <label for="email">Email:</label>
         <br />
         <input type="email" id="email" name="email" />
+        <br />
+        <input type="submit" />
       </form>
     </form>
   </div>

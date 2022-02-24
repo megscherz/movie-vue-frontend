@@ -65,7 +65,8 @@ export default {
 <template>
   <div class="home">
     <h1>{{ message }}</h1>
-    <div>
+    <h2>Login to get started</h2>
+    <!-- <div>
       Title:
       <input type="text" v-model="newMovieParams.title" />
     </div>
@@ -121,8 +122,6 @@ export default {
           <button>Close</button>
         </form>
       </dialog>
-    </div>
+    </div> -->
   </div>
 </template>
-
-<style></style>
