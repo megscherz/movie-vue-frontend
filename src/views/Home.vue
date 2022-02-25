@@ -66,6 +66,20 @@ export default {
   <div class="home">
     <h1>{{ message }}</h1>
     <h2>Login to get started</h2>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card">
+          <img src="https://www.placecage.com/140/100" class="card-img-top" alt="" />
+          <div class="card-body">
+            <h5 class="card-title">TITLE</h5>
+            <p class="card-text">PLOT</p>
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-primary" type="submit">Button</button>
+    </div>
+
     <!-- <div>
       Title:
       <input type="text" v-model="newMovieParams.title" />
